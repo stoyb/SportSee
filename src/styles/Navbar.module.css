@@ -1,0 +1,32 @@
+.header {
+    column-gap: 7%;
+    background: #020203;
+    height: 91px;
+    display: flex;
+    padding: 0 20px;
+    box-shadow: 0 4px 4px #000;
+}
+.nav {
+    width: 75%;
+}
+.logo {
+    width: 145px;
+}
+.ul {
+    color: #FFF;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    column-gap: 12%;
+    margin: 34px 0;
+}
+.link {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight:500;
+    font-family: Roboto;
+}
