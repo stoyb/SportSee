@@ -7,12 +7,9 @@ const Navbar = () => {
   return (
     <>
     <header className={styles.header}>
-        <img className={styles.logo} src={logo} alt="SportSee"/>
+        <img className={styles.logo}src={logo} alt="SportSee"/>
         <nav className={styles.nav}>
             <ul className={styles.ul}>
-                <li>
-                    <Link className={styles.link} to="/">Accueil</Link>
-                </li>
                 <li>
                     <Link className={styles.link} to="/">Accueil</Link>
                 </li>
