@@ -1,9 +1,9 @@
 import React from 'react'
-import styles from '../styles/Sidebar.module.css'
-import logo from '../assets/icons/icon1.jpg'
-import logo2 from '../assets/icons/icon2.jpg'
-import logo3 from '../assets/icons/icon3.jpg'
-import logo4 from '../assets/icons/icon4.jpg'
+import styles from './Sidebar.module.css'
+import logo from '../../assets/icons/icon1.jpg'
+import logo2 from '../../assets/icons/icon2.jpg'
+import logo3 from '../../assets/icons/icon3.jpg'
+import logo4 from '../../assets/icons/icon4.jpg'
 import { Link } from 'react-router-dom'
 
 const Sidebar = () => {

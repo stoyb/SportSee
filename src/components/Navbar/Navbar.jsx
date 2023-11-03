@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from '../assets/logo_header.svg'
-import styles from '../styles/Navbar.module.css'
+import logo from '../../assets/logo_header.svg'
+import styles from './Navbar.module.css'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
