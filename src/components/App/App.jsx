@@ -1,26 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios'
+import React from 'react';
+//import axios from 'axios'
 import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar'; 
 import Sidebar from '../Sidebar/Sidebar';
-import mock from '../../api/service';
+import Users from '../../api/mockData';
 
 function App() {
-  const userId = 12
-  const [userData, setUserData] = useState(null)
+  //const userId = 12
+  //const [userData, setUserData] = useState(null)
 
-  useEffect(() => {
-    axios.get(`http://localhost:3000/user/${userId}`)
-    .then(response => {
-      console.log(mock);
-      setUserData(response.data);
-    });
-  }, []);
+ 
+  // useEffect(() => {
+  //   axios.get(`http://localhost:3000/user/${userId}`)
+  //   .then(response => {
+       console.log(Users);
+  //     setUserData(response.data);
+  //   });
+  // }, []);
   return (
     <Router>
       <Navbar />
       <Sidebar />
-      <div>
+      {/* <div>
         {userData ? (
           <div>
             <p>ID: {userData.id}</p>
@@ -28,7 +29,7 @@ function App() {
         ): (
           <p>Loading...</p>
         )}
-      </div>
+      </div> */}
     </Router>
   );
 }
