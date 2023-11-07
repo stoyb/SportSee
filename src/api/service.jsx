@@ -1,26 +1,37 @@
-import Users from "./mockData";
-import axios from "axios";
+//import axios from "axios";
 
-// componentDidMount() {
-//     axios.get(`http://localhost:3000/user/${userId}`)
-//     .then(res => {
-//         const persons = res.data;
-//         console.log(persons);
-//         console.log(res);
-//     })
-// }
-// import MockAdapter from 'axios-mock-adapter'
+import { data } from './mockData';
 
-// const mock = new MockAdapter(axios);
+// const fetchDataFromAPI = async (userId) => {
+//     try{
+//     const response = await axios.get(`http://localhost:3000/user/${userId}`)
+//     console.log(response);
+//     } catch(error) {
+//         console.error(error);
+//     }
 
-// const userId = 12; 
+// };
+export const fetchMockData = (userId) => {
+    const user = data.find((userData) => userData.id === userId);
+    if (user) {
+      return user;
+    } else {
+      throw new Error('User not found');
+    }
+};
 
-// mock.onGet(`http://localhost:3000/user/${userId}`).reply(200, { 
-//     id:userId,
-//     firstName:"John", 
-//     lastName:"Doe",
-//     age:30, 
-//     todayScore:85, 
-// });
 
-// export default mock
+
+
+
+
+
+
+// const userId = 12
+    // try {
+    //     const response = await axios.get(`http://localhost:3000/user/`);
+    //   return response.data;
+    // } catch (error) {
+    //     console.error("Pas de retours des données");
+    //   throw error;
+    // }

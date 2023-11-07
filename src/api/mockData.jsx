@@ -1,10 +1,4 @@
-import { Component } from "react"
-
-class Users extends Component {
-    constructor() {
-        super()
-        this.state =  {
-            people: [
+export const data = [
                 {
                     id: 12,
                     userInfos: {
@@ -35,8 +29,8 @@ class Users extends Component {
                         lipidCount: 120
                     }
                 }
-            ],
-            activity: [
+            ]
+export const activity = [
                 {
                     userId: 12,
                     sessions: [
@@ -117,8 +111,8 @@ class Users extends Component {
                         }
                     ]
                 }
-            ],
-            sessions: [
+            ]
+export const sessions = [
                 {
                     userId: 12,
                     sessions: [
@@ -185,8 +179,8 @@ class Users extends Component {
                         }
                     ]
                 }
-            ], 
-            performance: [
+            ] 
+export const performance = [
                 {
                     userId: 12,
                     kind: {
@@ -262,7 +256,4 @@ class Users extends Component {
                     ]
                 }
             ]
-        }
-    }
-}
-export default Users
+
