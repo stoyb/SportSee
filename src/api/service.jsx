@@ -11,13 +11,11 @@ import { data } from './mockData';
 //     }
 
 // };
-export const fetchMockData = (userId) => {
+export const fetchMockData = async (userId) => {
+  return new Promise((resolve) => {
     const user = data.find((userData) => userData.id === userId);
-    if (user) {
-      return user;
-    } else {
-      throw new Error('User not found');
-    }
+    resolve(user)
+  })
 };
 
 
