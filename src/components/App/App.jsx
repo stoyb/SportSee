@@ -4,12 +4,13 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { fetchMockData } from '../../api/service';
 import Navbar from '../Navbar/Navbar'; 
 import Sidebar from '../Sidebar/Sidebar';
+import styles  from './App.module.css'
 
 function App() {
 
 const [count, setCount] = useState(null)
 useEffect(()=> {
-    const userId = 12
+  const userId = 12
   fetchMockData(userId)
   .then(res => {
     setCount(res)
@@ -23,10 +24,11 @@ useEffect(()=> {
     <Router>
       <Navbar />
       <Sidebar />
-       <div>
+       <div className={styles.background}>
          {count ? (
            <div>
-             <p> User ID: {count.id}</p>
+             <h1 className={styles.title}>Bonjour <span className={styles.red}>{count.userInfos.firstName}</span></h1>
+             <p className={styles.subtitle}>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
            </div>
          ): (
            <p>Loading...</p>

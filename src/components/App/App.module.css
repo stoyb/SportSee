@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700&family=Montserrat:wght@500&family=Roboto:wght@400;500&display=swap');
+@media (min-width:1024px) {
+.background {
+  padding: 130px 159px;
+}
+.title {
+  margin: 0;
+  font-size: 48px;
+  font-family: Roboto;
+  font-weight: 500;
+}
+.red {
+  color: #FF0101;
+}
+.subtitle {
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: 400;
+  margin: 18px 0;
+}
+}
