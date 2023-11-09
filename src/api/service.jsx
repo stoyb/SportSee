@@ -1,6 +1,7 @@
 //import axios from "axios";
 
-import { data } from './mockData';
+import { activity, data } from './mockData';
+
 
 // const fetchDataFromAPI = async (userId) => {
 //     try{
@@ -14,6 +15,14 @@ import { data } from './mockData';
 export const fetchMockData = async (userId) => {
   return new Promise((resolve) => {
     const user = data.find((userData) => userData.id === userId);
+    resolve(user)
+  })
+};
+console.log(activity);
+export const fetchMockDataActivity = async (userId) => {
+  return new Promise((resolve) => {
+    const user = activity.find((userData) => userData.userId === userId);
+    console.log(user);
     resolve(user)
   })
 };

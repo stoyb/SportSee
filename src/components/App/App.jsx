@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { fetchMockData } from '../../api/service';
 import Navbar from '../Navbar/Navbar'; 
 import Sidebar from '../Sidebar/Sidebar';
+import SimpleBarChart from '../SimpleBarChart/SimpleBarChart';
 import styles  from './App.module.css'
 
 function App() {
@@ -24,6 +25,7 @@ useEffect(()=> {
     <Router>
       <Navbar />
       <Sidebar />
+     
        <div className={styles.background}>
          {count ? (
            <div>
@@ -34,6 +36,7 @@ useEffect(()=> {
            <p>Loading...</p>
          )}
        </div>
+       <SimpleBarChart />s
     </Router>
   );
 }
