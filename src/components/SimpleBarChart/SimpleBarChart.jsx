@@ -1,4 +1,5 @@
 import React from 'react'
+import { fetchMock } from '../../api/service';
 import { useState, useEffect } from 'react';
 import {
     BarChart,
@@ -9,14 +10,15 @@ import {
     Tooltip,
     Legend
   } from "recharts";
-import { fetchMockDataActivity } from '../../api/service';
+  
 
 
 const SimpleBarChart = () => {
     const [count, setCount] = useState(null)
     useEffect(()=> {
-        const userId = 12
-        fetchMockDataActivity(userId)
+      const userId = 12
+      const user = "id/activity"
+      fetchMock(userId, user)
         .then(res => {
           setCount(res)
         })

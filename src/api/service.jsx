@@ -1,6 +1,6 @@
 //import axios from "axios";
 
-import { activity, data } from './mockData';
+import { userMainData, activity } from './mockData';
 
 
 // const fetchDataFromAPI = async (userId) => {
@@ -12,33 +12,25 @@ import { activity, data } from './mockData';
 //     }
 
 // };
-export const fetchMockData = async (userId) => {
-  return new Promise((resolve) => {
-    const user = data.find((userData) => userData.id === userId);
-    resolve(user)
-  })
-};
-console.log(activity);
-export const fetchMockDataActivity = async (userId) => {
-  return new Promise((resolve) => {
-    const user = activity.find((userData) => userData.userId === userId);
-    console.log(user);
-    resolve(user)
-  })
-};
+console.log(userMainData);
+export const fetchMock = async (userDataId, end) => {
+  function getData(table, key, usId) {
+    const userData = table.find((user) => user[key] === usId);
+    return new Promise((resolve) => {
+      resolve(userData);
+    });
+  }
+  switch(end) {
+    case 'id':
+      const data = getData(userMainData, 'id', userDataId)
+    return data
+    case 'id/activity':
+      const activityData = getData(activity, 'userId', userDataId)
+    return activityData
+    default:
+      return null
+    }
+}
 
 
 
-
-
-
-
-
-// const userId = 12
-    // try {
-    //     const response = await axios.get(`http://localhost:3000/user/`);
-    //   return response.data;
-    // } catch (error) {
-    //     console.error("Pas de retours des données");
-    //   throw error;
-    // }

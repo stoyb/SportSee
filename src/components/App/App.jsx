@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { fetchMockData } from '../../api/service';
+//import { fetchMockData } from '../../api/service';
 import Navbar from '../Navbar/Navbar'; 
 import Sidebar from '../Sidebar/Sidebar';
 import SimpleBarChart from '../SimpleBarChart/SimpleBarChart';
 import styles  from './App.module.css'
+import { fetchMock } from '../../api/service';
 
 function App() {
 
 const [count, setCount] = useState(null)
 useEffect(()=> {
   const userId = 12
-  fetchMockData(userId)
+  const user = "id"
+  fetchMock(userId, user)
   .then(res => {
     setCount(res)
   })
@@ -36,7 +38,7 @@ useEffect(()=> {
            <p>Loading...</p>
          )}
        </div>
-       <SimpleBarChart />s
+       <SimpleBarChart />
     </Router>
   );
 }
