@@ -1,6 +1,6 @@
 //import axios from "axios";
 
-import { userMainData, activity } from './mockData';
+import { userMainData, activity, sessions } from './mockData';
 
 
 // const fetchDataFromAPI = async (userId) => {
@@ -12,13 +12,10 @@ import { userMainData, activity } from './mockData';
 //     }
 
 // };
-console.log(userMainData);
-export const fetchMock = async (userDataId, end) => {
+const fetchMock = async (userDataId, end) => {
   function getData(table, key, usId) {
     const userData = table.find((user) => user[key] === usId);
-    return new Promise((resolve) => {
-      resolve(userData);
-    });
+    return userData
   }
   switch(end) {
     case 'id':
@@ -27,9 +24,15 @@ export const fetchMock = async (userDataId, end) => {
     case 'id/activity':
       const activityData = getData(activity, 'userId', userDataId)
     return activityData
+    case 'id/sessions':
+      const sessionsData = getData(sessions, 'userId', userDataId)
+    return sessionsData
     default:
       return null
     }
+}
+export const fetchData = async (userId, end) => {
+  return await fetchMock(userId, end)
 }
 
 

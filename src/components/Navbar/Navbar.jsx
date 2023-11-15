@@ -17,7 +17,7 @@ const Navbar = () => {
                     <Link className={styles.link} to="/">Profil</Link>
                 </li>
                 <li>
-                    <Link className={styles.link} to="/">Réglagles</Link>
+                    <Link className={styles.link} to="/">Réglage</Link>
                 </li>
                 <li>
                     <Link className={styles.link} to="/">Communauté</Link>

@@ -18,4 +18,11 @@
   font-weight: 400;
   margin: 18px 0;
 }
+.barChart{
+  width:594px;
+  height: 320px;
+  background-color: #000;
+  border-radius: 12px;
+  
+}
 }

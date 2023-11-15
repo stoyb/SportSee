@@ -1,4 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700&family=Montserrat:wght@500&family=Roboto:wght@400;500&display=swap');
 @media (min-width:1024px) {
-    
+    .barChartComponent{
+        width:580px;
+        height: 244px;
+        background-color: #FBFBFB;
+        border-radius: 12px;
+        position: absolute;
+        top:234px;
+        left:160px;
+        
+      }
+      .barChartContainer{
+        border-radius: 12px;
+        position: absolute;
+        top:40px;
+        left:30px;
+      }
+      .xaxis{
+          font-size:14px;
+          color:#9B9EAC;
+      }
+      .xaxis .recharts-layer.recharts-cartesian-axis-tick text {
+        padding-top: 34px;
+      }
 }
