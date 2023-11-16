@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Navbar from '../Navbar/Navbar'; 
-import Sidebar from '../Sidebar/Sidebar';
-import SimpleBarChart from '../SimpleBarChart/SimpleBarChart';
+import Navbar from '../../components/Navbar/Navbar'; 
+import Sidebar from '../../components/Sidebar/Sidebar';
+import SimpleBarChart from '../../components/SimpleBarChart/SimpleBarChart';
 import styles  from './App.module.css'
 import { fetchData } from '../../api/service';
 import User  from '../../formatedData/userData';
@@ -29,7 +28,7 @@ user = count ? new User(count) : null;
 firstName = count ? user.name : null;
 
 return (
-  <Router>
+  <>
     <Navbar />
     <Sidebar />
     <div className={styles.background}>
@@ -47,7 +46,7 @@ return (
       )}
     </div>
     <SimpleBarChart />
-  </Router>
+  </>
 );
 }
 
