@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import SimpleBarChart from '../../components/SimpleBarChart/SimpleBarChart';
 import styles  from './App.module.css'
-import { fetchData } from '../../api/service';
+import { fetchData } from '../../services/service';
 import User  from '../../formatedData/userData';
 
 

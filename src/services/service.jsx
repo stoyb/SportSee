@@ -1,6 +1,6 @@
 //import axios from "axios";
 
-import { userMainData, activity, sessions } from './mockData';
+import { userMainData, activity, sessions } from '../__mocks__/mockData';
 
 
 // const fetchDataFromAPI = async (userId) => {
