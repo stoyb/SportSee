@@ -1,26 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700&family=Montserrat:wght@500&family=Roboto:wght@400;500&display=swap');
 @media (min-width:1024px) {
-    .barChartComponent{
-        width:580px;
-        height: 244px;
-        background-color: #FBFBFB;
-        border-radius: 12px;
-        position: absolute;
-        top:234px;
-        left:160px;
-        
-      }
-      .barChartContainer{
-        border-radius: 12px;
-        position: absolute;
-        top:40px;
-        left:30px;
-      }
-      .xaxis{
-          font-size:14px;
-          color:#9B9EAC;
-      }
-      .xaxis .recharts-layer.recharts-cartesian-axis-tick text {
-        padding-top: 34px;
-      }
+  .barChartComponent{
+    width:580px;
+    height:244px;
+    background-color:#FBFBFB;
+    border-radius:12px;
+    position:absolute;
+    top:234px;
+    left:160px;
+  }
+  .barChartContainer{
+    border-radius:12px;
+    position:absolute;
+  }
+  .title{
+    margin: 24px 32px 0;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 500;
+    color: #20253A;
+  }
+  .legend {
+    color:"#74798C";
+    font-size:12px;
+    margin-right:12px; 
+    font-weight:500; 
+  }
+  .tooltip{
+    background-color: #e60000;
+    color:#FFF;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:18px 14px;
+    font-size:10px;
+  }
 }
