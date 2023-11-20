@@ -5,7 +5,8 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import SimpleBarChart from '../../components/SimpleBarChart/SimpleBarChart';
 import styles  from './App.module.css'
 import { fetchData } from '../../services/service';
-import User  from '../../formatedData/userData';
+import User  from '../../formattedData/userData';
+import SimpleLineChart from '../../components/SimpleLineChart/SimpleLineChart';
 
 
 function App() {
@@ -46,6 +47,7 @@ return (
       )}
     </div>
     <SimpleBarChart />
+    <SimpleLineChart/>
   </>
 );
 }

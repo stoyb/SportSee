@@ -11,28 +11,17 @@ import {
     Legend
   } from "recharts";
 import styles from './SimpleBarChart.module.css'
-import Activity from '../../formatedData/activityData';
+import Activity from '../../formattedData/activityData';
   
 
 const SimpleBarChart = () => {
   let activity = null
   let sessions = null
-  const setStyleLegendText = (value) => {
-    return <span className={styles.legend} >{value}</span>;
-  };
-  const CustomTooltip = ({ payload }) => {
-      return (
-        <div className={styles.tooltip} >
-          <p className="weight">{payload[0].value + "kg"}</p>
-          <p className="calories">{payload[1].value + "kCal"}</p>
-        </div>
-      );
-  };
   const [count, setCount] = useState(null)
     useEffect(()=> {
       const userId = 12
-      const user = "id/activity"
-      fetchData(userId, user)
+      const activity = "id/activity"
+      fetchData(userId, activity)
         .then(res => {
           setCount(res)
         })
@@ -42,7 +31,24 @@ const SimpleBarChart = () => {
       }, [])
     
   activity = count ? new Activity(count.sessions) : null;
-  sessions = count ? activity.formatedSession : null;
+  sessions = count ? activity.formattedDataForBarChart : null;
+ 
+
+  const setStyleLegendText = (value) => {
+    return <span className={styles.legend} >{value}</span>;
+  };
+  const CustomTooltip = ({ payload }) => {
+    if (payload && payload.length) {
+      return (
+        <div className={styles.tooltip}>
+          <p>{`${payload[0].value}kg`}</p>
+          <p>{`${payload[1].value}kCal`}</p>
+        </div>
+      );
+    }
+    return null;
+  };
+
   return (
    <div className={styles.barChartComponent}>
      <div>

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700&family=Montserrat:wght@500&family=Roboto:wght@400;500&display=swap');
+@media (min-width:1024px) {
+.barChartComponent {
+    width:196px;
+    position:absolute;
+    top:510px;
+    left:160px;
+    background-color: red;
+    border-radius: 8px;
+}
+.barChartContainer {
+    position:absolute;
+    top:4px;
+    right: 52px;
+}
+.tooltip {
+    background-color: #FFF;
+    font-size: 8px;
+    padding: 2px 8px;
+    font-family: Roboto;
+    font-weight: 500;
+}
+.legend{
+    position: absolute;
+    bottom:140px;
+    left:74px;
+    font-size: 14px;
+    color:rgba(255, 255, 255, 0.5)
+}
+}
