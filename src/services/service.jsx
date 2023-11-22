@@ -1,6 +1,6 @@
 //import axios from "axios";
 
-import { userMainData, activity, sessions } from '../__mocks__/mockData';
+import { userMainData, activity, sessions, performance } from '../__mocks__/mockData';
 
 
 // const fetchDataFromAPI = async (userId) => {
@@ -27,6 +27,9 @@ const fetchMock = async (userDataId, end) => {
     case 'id/sessions':
       const sessionsData = getData(sessions, 'userId', userDataId)
     return sessionsData
+    case 'id/performance':
+      const performanceData = getData(performance, 'userId', userDataId)
+    return performanceData
     default:
       return null
     }

@@ -7,6 +7,7 @@ import styles  from './App.module.css'
 import { fetchData } from '../../services/service';
 import User  from '../../formattedData/userData';
 import SimpleLineChart from '../../components/SimpleLineChart/SimpleLineChart';
+import RadarChat from '../../components/RadarChat/RadarChat';
 
 
 function App() {
@@ -48,6 +49,7 @@ return (
     </div>
     <SimpleBarChart />
     <SimpleLineChart/>
+    <RadarChat/>
   </>
 );
 }

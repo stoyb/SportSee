@@ -11,7 +11,7 @@ import {
     Legend
   } from "recharts";
 import styles from './SimpleBarChart.module.css'
-import Activity from '../../formattedData/activityData';
+import User from '../../formattedData/userData';
   
 
 const SimpleBarChart = () => {
@@ -30,8 +30,8 @@ const SimpleBarChart = () => {
         });
       }, [])
     
-  activity = count ? new Activity(count.sessions) : null;
-  sessions = count ? activity.formattedDataForBarChart : null;
+  activity = count ? new User(count) : null;
+  sessions = activity ? activity.formattedDataForBarChart : null;
  
 
   const setStyleLegendText = (value) => {
