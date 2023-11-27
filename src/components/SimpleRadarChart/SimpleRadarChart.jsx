@@ -18,14 +18,16 @@ const SimpleRadarChart = () => {
      .catch(error => 
       console.error(error))
   }, []);
-
+  console.log(countPerformance);
   performanceData = countPerformance ? new User(countPerformance) : null
+  console.log(performanceData);
   cardioData = performanceData ? performanceData.subjectItem : null
+  console.log(cardioData);
   return (
     <>
     <div className={styles.radarChartComponent}>
   { countPerformance ? (
-    <RadarChart cx={97} cy={100} outerRadius={50} width={260} height={200} data={cardioData}>
+    <RadarChart cx={90} cy={100} outerRadius={48} width={260} height={200} data={cardioData}>
     <PolarGrid radialLines={false} />
     <PolarAngleAxis dataKey="kind" tick={{ fill: '#FFFFFF', fontSize: 8, fontWeight: 'bold' }} tickFormatter={(value) => value.charAt(0).toUpperCase() + value.slice(1)} />
     <Radar dataKey="value" fill="#FF0101B2" fillOpacity={0.7} />

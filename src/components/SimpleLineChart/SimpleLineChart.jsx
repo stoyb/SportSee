@@ -17,9 +17,11 @@ const SimpleLineChart = () => {
        .catch(error => {
            console.error(error);
        })
-  }, [])
-   sessionsData = countSessions ? new User(countSessions.sessions) : null
-   data = sessionsData ? sessionsData.formattedDataForLineChart : null
+  }, []); 
+
+  sessionsData = countSessions ? new User(countSessions) : null
+  data = sessionsData ? sessionsData.formattedDataForLineChart : null
+
    const setStyleLegendText = () => {
     return <span className={styles.legend}>Durée moyenne des sessions</span>;
   };
@@ -39,7 +41,7 @@ const SimpleLineChart = () => {
     { countSessions ? (
     <LineChart className={styles.barChartContainer} width={266} height={200} data={data}>
     <CartesianGrid horizontal={false} vertical={false} />
-    <XAxis dataKey="day" padding={{ right: 10, left: 10 }} tickLine={false} axisLine={false} tick={{ fill: 'rgba(255,255,255,0.4)', fontSize: 12, fontWeight: 500 }}/>
+    <XAxis dataKey="day" padding={{ right: 20, left: 10 }} tickLine={false} axisLine={false} tick={{ fill: 'rgba(255,255,255,0.4)', fontSize: 12, fontWeight: 500 }}/>
     <YAxis tick={false} axisLine={false} />
     <Tooltip content={CustomTooltip} />
     <Legend content={setStyleLegendText}/>

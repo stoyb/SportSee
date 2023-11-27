@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700&family=Montserrat:wght@500&family=Roboto:wght@400;500&display=swap');
 @media (min-width:1024px) {
   .radarChartComponent{
-    width:192px;
+    width:184px;
     position:absolute;
     top:510px;
     left:362px;
