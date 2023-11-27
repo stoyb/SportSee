@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700&family=Montserrat:wght@500&family=Roboto:wght@400;500&display=swap');
 @media (min-width:1024px) {
 .barChartComponent {
-    width:196px;
+    width:184px;
     position:absolute;
     top:510px;
     left:160px;
-    background-color: red;
+    background-color: #FF0000;
     border-radius: 8px;
 }
 .barChartContainer {

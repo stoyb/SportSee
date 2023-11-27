@@ -20,7 +20,6 @@ const SimpleLineChart = () => {
   }, [])
    sessionsData = countSessions ? new User(countSessions.sessions) : null
    data = sessionsData ? sessionsData.formattedDataForLineChart : null
-   console.log(data);
    const setStyleLegendText = () => {
     return <span className={styles.legend}>Durée moyenne des sessions</span>;
   };
