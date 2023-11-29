@@ -28,6 +28,22 @@ export default class User {
     }
 
     get setScore() {
+        return [ 
+            {
+                data : 0,
+                fill: "transparent"
+            },
+            {
+                data : this.data.todayScore * 100,
+                fill:"#FF0000"
+            },
+            {
+                data : 100,
+                fill: "transparent"
+            }
+        ]
+    }
+    get setTodayScore() {
         return this.data.todayScore * 100
     }
 }

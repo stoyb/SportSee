@@ -18,11 +18,10 @@ const SimpleRadarChart = () => {
      .catch(error => 
       console.error(error))
   }, []);
-  console.log(countPerformance);
+  
   performanceData = countPerformance ? new User(countPerformance) : null
-  console.log(performanceData);
   cardioData = performanceData ? performanceData.subjectItem : null
-  console.log(cardioData);
+  
   return (
     <>
     <div className={styles.radarChartComponent}>

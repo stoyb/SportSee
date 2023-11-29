@@ -52,7 +52,7 @@ const SimpleBarChart = () => {
   return (
    <div className={styles.barChartComponent}>
      <div>
-      <p className={styles.title}>Activité quotidienne</p>
+      <h2 className={styles.title}>Activité quotidienne</h2>
       {count ? <Legend align="center" verticalAlign="bottom" /> : null}
      </div>
     {count ? (

@@ -7,6 +7,7 @@
     left:160px;
     background-color: #FF0000;
     border-radius: 8px;
+
 }
 .barChartContainer {
     position:absolute;
@@ -25,6 +26,8 @@
     bottom:140px;
     left:74px;
     font-size: 14px;
-    color:rgba(255, 255, 255, 0.5)
+    color:rgba(255, 255, 255, 0.5);
+    margin: 0;
+    font-weight: 500;
 }
 }

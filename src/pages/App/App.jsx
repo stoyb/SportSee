@@ -29,7 +29,6 @@ useEffect(()=> {
 
 user = count ? new User(count) : null;
 firstName = count ? user.name : null;
-console.log(firstName);
 
 return (
   <>

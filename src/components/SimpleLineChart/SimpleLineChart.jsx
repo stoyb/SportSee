@@ -23,7 +23,7 @@ const SimpleLineChart = () => {
   data = sessionsData ? sessionsData.formattedDataForLineChart : null
 
    const setStyleLegendText = () => {
-    return <span className={styles.legend}>Durée moyenne des sessions</span>;
+    return <h2 className={styles.legend}>Durée moyenne des sessions</h2>;
   };
    const CustomTooltip = ({ payload }) => {
     if (payload && payload.length) {

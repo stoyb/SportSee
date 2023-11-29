@@ -6,7 +6,47 @@
     position:absolute;
     top:510px;
     left:556px;
-    background-color: aqua;
+    background-color: #FBFBFB;
     border-radius: 8px;
+}
+.title{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+.legend{
+    position: absolute;
+    bottom:152px;
+    left:15px;
+    font-size: 14px;
+    color:#20253A;
+    margin: 0;
+    font-weight: 500;
+}
+.todayScore {
+    margin:0;
+    position: relative;
+    bottom: 147px;
+    left: 46px;
+    max-width: 101px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #282D30;
+    line-height: 20px;
+    background-color: #FFF;
+    width: 120px;
+    height: 70px;
+    border-radius: 50%;
+    padding-top: 31px;
+}
+.todayScoreGrey {
+    color: #74798C;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    display: inline-block;
+    width: 48px;
 }
 }
