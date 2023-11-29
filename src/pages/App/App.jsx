@@ -9,12 +9,21 @@ import User  from '../../formattedData/userData';
 import SimpleLineChart from '../../components/SimpleLineChart/SimpleLineChart';
 import SimpleRadarChart from '../../components/SimpleRadarChart/SimpleRadarChart';
 import SimpleRadialBarChart from '../../components/SimpleRadialBarChart/SimpleRadialBarChart';
-
+import Card from '../../components/Card/Card';
+import logoCalories from "../../assets/icons/calories-icon.jpg";
+import logoProteines from "../../assets/icons/protein-icon.jpg";
+import logoCarbo from "../../assets/icons/carbs-icon.jpg";
+import logoLipid from "../../assets/icons/fat-icon.jpg";
 
 function App() {
 const [count, setCount] = useState(null)
 let user = null;
 let firstName = null;
+let calories = null;
+let protein = null;
+let carbo = null; 
+let lipid = null; 
+
 useEffect(()=> {
   const userId = 12
   const user = "id"
@@ -29,6 +38,10 @@ useEffect(()=> {
 
 user = count ? new User(count) : null;
 firstName = count ? user.name : null;
+calories = count ? user.calories : null;
+protein = count ? user.proteines : null; 
+carbo = count ? user.carbo : null;
+lipid = count ? user.lipid : null;
 
 return (
   <>
@@ -52,6 +65,13 @@ return (
     <SimpleLineChart/>
     <SimpleRadarChart/>
     <SimpleRadialBarChart/>
+    <section className={styles.calories}>
+    <Card img={logoCalories} value={`${calories}kCal`} type="Calories"/>
+    <Card img={logoProteines} value={`${protein}g`} type="Protéines"/> 
+    <Card img={logoCarbo} value={`${carbo}g`} type="Glucides"/>
+    <Card img={logoLipid} value={`${lipid}g`} type="Lipides"/> 
+
+    </section>
   </>
 );
 }

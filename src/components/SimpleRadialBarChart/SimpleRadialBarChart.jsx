@@ -42,7 +42,7 @@ const SimpleRadialBarChart = () => {
       endAngle={450}
       barSize={7}
       >
-  <RadialBar minAngle={15} fill="#FFF" clockWise dataKey="data" />
+  <RadialBar minAngle={15} radius={[10]} cornerRadius={30 / 2}clockWise dataKey="data" />
   <Legend content={setStyleLegendText}/>
 </RadialBarChart>
         ) : (

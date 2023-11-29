@@ -6,6 +6,18 @@ export default class User {
     get name() {
         return this.data.userInfos.firstName
     }
+    get calories() {
+        return this.data.keyData.calorieCount
+    }
+    get proteines() {
+        return this.data.keyData.proteinCount
+    }
+    get carbo() {
+        return this.data.keyData.carbohydrateCount
+    }
+    get lipid() {
+        return this.data.keyData.lipidCount
+    }
     get formattedDataForBarChart() {
         return this.data.sessions.map((session, index) => ({
             day: index + 1,
