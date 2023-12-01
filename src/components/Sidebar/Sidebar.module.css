@@ -4,11 +4,12 @@
         flex-direction: column;
         align-items: center;
         background-color: #020203;
-        width: 83px;
+        width: 112px;
         height: 100%;
         position: fixed;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 25%);
-        padding: 91px 0;
+        padding: 100px 0 0;
+        row-gap: 50px;
     }
     .nav {
         display: flex;
@@ -23,8 +24,8 @@
         list-style: none;
     }
     .img{
-        border-radius: 8px;
-        width: 46px;
+        border-radius:8px;
+        width:64px;
     }
 
     .copyright {

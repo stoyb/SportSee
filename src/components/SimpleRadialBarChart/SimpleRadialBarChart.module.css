@@ -4,10 +4,11 @@
     width:184px;
     height: 196px;
     position:absolute;
-    top:510px;
+    top:610px;
     left:556px;
     background-color: #FBFBFB;
     border-radius: 8px;
+    display: none;
 }
 .title{
     font-family: Roboto;

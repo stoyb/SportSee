@@ -3,11 +3,11 @@
 .barChartComponent {
     width:184px;
     position:absolute;
-    top:510px;
+    top:610px;
     left:160px;
     background-color: #FF0000;
     border-radius: 8px;
-
+    display: none;
 }
 .barChartContainer {
     position:absolute;

@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700&family=Montserrat:wght@500&family=Roboto:wght@400;500&display=swap');
 @media (min-width:1024px) {
   .barChartComponent{
-    width:580px;
-    height:244px;
+    width:660px;
+    height:300px;
     background-color:#FBFBFB;
     border-radius:12px;
     position:absolute;
-    top:234px;
-    left:160px;
+    top:288px;
+    left:224px;
   }
   .barChartContainer{
     border-radius:12px;
@@ -21,10 +21,10 @@
     color: #20253A;
   }
   .legend {
-    color:"#74798C";
     font-size:12px;
     margin-right:12px; 
     font-weight:500; 
+    color: #74798C;
   }
   .tooltip{
     background-color: #e60000;

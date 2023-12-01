@@ -35,7 +35,7 @@ const SimpleBarChart = () => {
  
 
   const setStyleLegendText = (value) => {
-    return <span className={styles.legend} >{value}</span>;
+    return <span className={styles.legend}>{value}</span>;
   };
   const CustomTooltip = ({ payload }) => {
     if (payload && payload.length) {
@@ -57,14 +57,14 @@ const SimpleBarChart = () => {
      </div>
     {count ? (
         <BarChart
-      width={590}
-      height={270}
+      width={660}
+      height={260}
       data={sessions}
       margin={{
         top:30,
         right: 32,
         left: 32,
-        bottom: 90
+        bottom: 24
       }}
       className={styles.barChartContainer}
       >  
@@ -72,7 +72,7 @@ const SimpleBarChart = () => {
       <XAxis dataKey="day" tickLine={false} tick={{ fill: "#74798C", fontSize: 14, fontWeight: 500 }} tickMargin={12} />
       <YAxis orientation="right" tickLine={false} tick={{ fill: "#74798C", fontSize: 14, fontWeight: 500 }} tickMargin={20} interval={1}/>
       <Tooltip content={<CustomTooltip />} />
-      <Legend verticalAlign="top" iconSize={8} iconType="circle" wrapperStyle={{position:"absolute", bottom:272, left:184}} formatter={setStyleLegendText}/>
+      <Legend verticalAlign="top" iconSize={8} iconType="circle" wrapperStyle={{position:"absolute", bottom:260, left:272}} formatter={setStyleLegendText}/>
       <Bar name="Poids (kg)" dataKey="kilogram" barSize={7} fill="#282D30" radius={[3, 3, 0, 0]} />
       <Bar name="Calories brulées (kCal)"dataKey="calories" barSize={7} fill="#E60000" radius={[3, 3, 0, 0]} />
     </BarChart> 

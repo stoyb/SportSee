@@ -54,7 +54,7 @@ return (
               Bonjour <span className={styles.red}>{firstName}</span>
             </h1>
             <p className={styles.subtitle}>
-              Félicitation ! Vous avez explosé vos objectifs hier 👏
+              Félicitations ! Vous avez explosé vos objectifs hier 👏
             </p>
         </div>
       ) : (

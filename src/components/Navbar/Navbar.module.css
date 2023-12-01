@@ -3,7 +3,7 @@
     .header {
         column-gap: 10%;
         background: #020203;
-        height: 69px;
+        height: 91px;
         display: flex;
         align-items: center;
         padding: 0 2%;
@@ -16,7 +16,7 @@
         width: 100%;
     }
     .logo {
-        width: 123px;
+        width: 178px;
     }
     .ul {
         color: #FFF;
@@ -25,13 +25,13 @@
         flex-direction: row;
         list-style: none;
         padding: 0;
-        column-gap: 20%;
+        column-gap: 16%;
         margin: 36px 0;
     }
     .link {
         color: #FFF;
         text-decoration: none;
-        font-size: 16px;
+        font-size: 20px;
         font-weight:500;
         font-family: Roboto;
     } 
