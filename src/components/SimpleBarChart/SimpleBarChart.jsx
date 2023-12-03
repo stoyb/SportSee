@@ -8,7 +8,8 @@ import {
     YAxis,
     CartesianGrid,
     Tooltip,
-    Legend
+    Legend,
+    ResponsiveContainer
   } from "recharts";
 import styles from './SimpleBarChart.module.css'
 import User from '../../formattedData/userData';
@@ -56,26 +57,28 @@ const SimpleBarChart = () => {
       {count ? <Legend align="center" verticalAlign="bottom" /> : null}
      </div>
     {count ? (
+        <ResponsiveContainer>
         <BarChart
       width={660}
       height={260}
       data={sessions}
       margin={{
-        top:30,
-        right: 32,
-        left: 32,
-        bottom: 24
+        top:24,
+        right: 14,
+        left: 24,
+        bottom: 64
       }}
       className={styles.barChartContainer}
       >  
       <CartesianGrid vertical={false} strokeDasharray="2" />
       <XAxis dataKey="day" tickLine={false} tick={{ fill: "#74798C", fontSize: 14, fontWeight: 500 }} tickMargin={12} />
-      <YAxis orientation="right" tickLine={false} tick={{ fill: "#74798C", fontSize: 14, fontWeight: 500 }} tickMargin={20} interval={1}/>
+      <YAxis orientation="right" axisLine={false} tickLine={false} tick={{ fill: "#74798C", fontSize: 14, fontWeight: 500 }} tickMargin={20} interval={1}/>
       <Tooltip content={<CustomTooltip />} />
-      <Legend verticalAlign="top" iconSize={8} iconType="circle" wrapperStyle={{position:"absolute", bottom:260, left:272}} formatter={setStyleLegendText}/>
+      <Legend verticalAlign="top" iconSize={8} iconType="circle" wrapperStyle={{position:"absolute", bottom:"100%", left:"30%"}} formatter={setStyleLegendText}/>
       <Bar name="Poids (kg)" dataKey="kilogram" barSize={7} fill="#282D30" radius={[3, 3, 0, 0]} />
       <Bar name="Calories brulées (kCal)"dataKey="calories" barSize={7} fill="#E60000" radius={[3, 3, 0, 0]} />
     </BarChart> 
+    </ResponsiveContainer>
 
 ) : (
   <p>Loading...</p>

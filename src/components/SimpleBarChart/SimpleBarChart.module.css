@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700&family=Montserrat:wght@500&family=Roboto:wght@400;500&display=swap');
 @media (min-width:1024px) {
   .barChartComponent{
-    width:660px;
-    height:300px;
+    width:53%;
+    height:34%;
     background-color:#FBFBFB;
     border-radius:12px;
     position:absolute;
-    top:288px;
-    left:224px;
+    top:246px;
+    left:205px;
   }
   .barChartContainer{
     border-radius:12px;

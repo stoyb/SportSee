@@ -65,7 +65,7 @@ return (
     <SimpleLineChart/>
     <SimpleRadarChart/>
     <SimpleRadialBarChart/>
-    <section className={styles.calories}>
+    <section className={styles.cards}>
     <Card img={logoCalories} value={`${calories}kCal`} type="Calories"/>
     <Card img={logoProteines} value={`${protein}g`} type="Protéines"/> 
     <Card img={logoCarbo} value={`${carbo}g`} type="Glucides"/>

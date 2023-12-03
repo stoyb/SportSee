@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { fetchData } from '../../services/service';
 import User from '../../formattedData/userData';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { LineChart, Line, XAxis, Tooltip, Legend, ResponsiveContainer} from 'recharts';
 import styles from './SimpleLineChart.module.css'
 
 const SimpleLineChart = () => {
@@ -39,14 +39,17 @@ const SimpleLineChart = () => {
     <>
     <div className={styles.barChartComponent}>
     { countSessions ? (
-    <LineChart className={styles.barChartContainer} width={266} height={200} data={data}>
-    <CartesianGrid horizontal={false} vertical={false} />
-    <XAxis dataKey="day" padding={{ right: 20, left: 10 }} tickLine={false} axisLine={false} tick={{ fill: 'rgba(255,255,255,0.4)', fontSize: 12, fontWeight: 500 }}/>
-    <YAxis tick={false} axisLine={false} />
-    <Tooltip content={CustomTooltip} />
-    <Legend content={setStyleLegendText}/>
-    <Line type="basis" dataKey="sessionLength" dot={false} stroke={'rgba(255,255,255,0.5)'} activeDot={{fill:'#FFF', strokeWidth: 10, stroke: 'rgba(255,255,255,0.2)'}}/>
-  </LineChart>
+    <ResponsiveContainer>
+    <LineChart 
+    className={styles.barChartContainer}  
+    data={data} 
+    >
+    <XAxis dataKey="day" padding={{ right: 10, left: 10 }} tickLine={false} axisLine={false} tick={{ fill: 'rgba(255,255,255,0.4)', fontSize: 12, fontWeight: 500 }}/> 
+    <Tooltip content={CustomTooltip} /> 
+    <Legend content={setStyleLegendText}/> 
+    <Line type="basis" dataKey="sessionLength" dot={false} stroke={'rgba(255,255,255,0.5)'} activeDot={{fill:'#FFF', strokeWidth: 10, stroke: 'rgba(255,255,255,0.2)'}} /> 
+    </LineChart>
+    </ResponsiveContainer>
     ):(
       <p>Loading...</p>
     ) 

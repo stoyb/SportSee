@@ -1,4 +1,12 @@
 const daysWeek = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
+const kind = {
+    1: 'Intensité',
+    2: 'Vitesse',
+    3: 'Force',
+    4: 'Endurance',
+    5: 'Energie',
+    6: 'Cardio'
+}
 export default class User {
     constructor(data){
         this.data = data;
@@ -35,10 +43,9 @@ export default class User {
         return this.data.data.map((element, index) => 
         ({
             value: element.value,
-            kind: this.data.kind[index + 1]
+            kind: kind[index + 1]
         }))
     }
-
     get setScore() {
         return [ 
             {

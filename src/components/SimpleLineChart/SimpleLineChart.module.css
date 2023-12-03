@@ -1,18 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700&family=Montserrat:wght@500&family=Roboto:wght@400;500&display=swap');
 @media (min-width:1024px) {
 .barChartComponent {
-    width:184px;
+    width:16.5%;
+    height:24%;
     position:absolute;
-    top:610px;
-    left:160px;
+    top:68%;
+    left:20%;
     background-color: #FF0000;
     border-radius: 8px;
-    display: none;
 }
 .barChartContainer {
     position:absolute;
-    top:4px;
-    right: 66px;
+    top: 6px;
 }
 .tooltip {
     background-color: #FFF;
@@ -23,11 +22,12 @@
 }
 .legend{
     position: absolute;
-    bottom:140px;
-    left:74px;
-    font-size: 14px;
+    bottom:132px;
+    left:24px;
+    font-size: 12px;
     color:rgba(255, 255, 255, 0.5);
     margin: 0;
     font-weight: 500;
+    width: 166px;
 }
 }

@@ -5,7 +5,7 @@
 }
 .title {
   margin: 0;
-  font-size: 48px;
+  font-size: 36px;
   font-family: Roboto;
   font-weight: 500;
 }
@@ -13,10 +13,10 @@
   color: #FF0101;
 }
 .subtitle {
-  font-size: 18px;
+  font-size: 16px;
   font-family: Roboto;
   font-weight: 400;
-  margin: 18px 0;
+  margin: 14px 0;
 }
 .barChart{
   width:594px;
@@ -25,9 +25,9 @@
   border-radius: 12px;
   
 }
-.calories{
-  position: relative;
-  top: 45px;
-  left: 300px;
+.cards{
+  position: absolute;
+  top: 250px;
+  left: 762px;
 }
 }

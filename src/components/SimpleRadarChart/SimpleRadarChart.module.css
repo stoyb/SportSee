@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700&family=Montserrat:wght@500&family=Roboto:wght@400;500&display=swap');
 @media (min-width:1024px) {
   .radarChartComponent{
-    width:184px;
+    width:16.5%;
+    height:24%;
     position:absolute;
-    top:610px;
-    left:362px;
+    top:530px;
+    left:390px;
     background-color: #282D30;
     border-radius: 8px;
-    display: none;
 }
 .kind{
     font-size: 8px;
