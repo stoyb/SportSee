@@ -4,11 +4,11 @@
         flex-direction: column;
         align-items: center;
         background-color: #020203;
-        width: 10.5%;
+        width: 115px;
         height: 100%;
         position: fixed;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 25%);
-        padding: 10% 0 0;
+        padding: 100px 0 0;
         row-gap: 3%;
     }
     .nav {

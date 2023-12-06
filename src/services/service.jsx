@@ -1,17 +1,32 @@
-//import axios from "axios";
-
+import axios from "axios";
 import { userMainData, activity, sessions, performance } from '../__mocks__/mockData';
 
+//Calls data from server
+const fetchDataFromAPI = async (userId, end) => {
+  try {
+    switch(end) {
+          case 'id':
+            const data = await axios.get(`http://localhost:3000/user/${userId}`)
+          return data.data
+          case 'id/activity':
+            const activityData = await axios.get(`http://localhost:3000/user/${userId}/activity`)
+          return activityData.data
+          case 'id/sessions':
+            const sessionsData = await axios.get(`http://localhost:3000/user/${userId}/average-sessions`)
+          return sessionsData.data
+          case 'id/performance':
+            const performanceData = await axios.get(`http://localhost:3000/user/${userId}/performance`)
+          return performanceData.data
+          default:
+            return null
+          }
+  } catch(error) {
+    console.error(error);
+    return null
+  }
+};
 
-// const fetchDataFromAPI = async (userId) => {
-//     try{
-//     const response = await axios.get(`http://localhost:3000/user/${userId}`)
-//     console.log(response);
-//     } catch(error) {
-//         console.error(error);
-//     }
-
-// };
+//Calls data from mockData.jsx 
 const fetchMock = async (userDataId, end) => {
   function getData(table, key, usId) {
     const userData = table.find((user) => user[key] === usId);
@@ -34,9 +49,24 @@ const fetchMock = async (userDataId, end) => {
       return null
     }
 }
+
+// Renders results from call data functions 
 export const fetchData = async (userId, end) => {
-  return await fetchMock(userId, end)
-}
+  try {
+    const fetchedData = await fetchDataFromAPI(userId, end);
+    if (fetchedData !== null) {
+      return fetchedData.data;
+    } else {
+      return await fetchMock(userId, end);
+    }
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
+
+
+
 
 
 

@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './Card.module.css'
+import styles from './UserDataCard.module.css'
 
-const Card = ({img, value, type }) => {
+const UserDataCard = ({img, value, type }) => {
   return (
     <>
     <div className={styles.cardComponent}>
@@ -15,4 +15,4 @@ const Card = ({img, value, type }) => {
   )
 }
 
-export default Card
+export default UserDataCard

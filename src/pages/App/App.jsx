@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+// React components
+import React, { useState, useEffect } from 'react';
+
+// Created components
 import Navbar from '../../components/Navbar/Navbar'; 
 import Sidebar from '../../components/Sidebar/Sidebar';
-import SimpleBarChart from '../../components/SimpleBarChart/SimpleBarChart';
+import DailyActivityChart from '../../components/DailyActivityChart/DailyActivityChart';
+import WeeklySessionsChart from '../../components/WeeklySessionsChart/WeeklySessionsChart';
+import PerformanceChart from '../../components/PerformanceChart/PerformanceChart';
+import ScoreChart from '../../components/ScoreChart/ScoreChart';
+import UserDataCard from '../../components/UserDataCard/UserDataCard';
+
+// CSS module
 import styles  from './App.module.css'
+
+// Service API calls
 import { fetchData } from '../../services/service';
+
+// Formating data class
 import User  from '../../formattedData/userData';
-import SimpleLineChart from '../../components/SimpleLineChart/SimpleLineChart';
-import SimpleRadarChart from '../../components/SimpleRadarChart/SimpleRadarChart';
-import SimpleRadialBarChart from '../../components/SimpleRadialBarChart/SimpleRadialBarChart';
-import Card from '../../components/Card/Card';
+
+// Assets
 import logoCalories from "../../assets/icons/calories-icon.jpg";
 import logoProteines from "../../assets/icons/protein-icon.jpg";
 import logoCarbo from "../../assets/icons/carbs-icon.jpg";
@@ -33,6 +43,7 @@ useEffect(()=> {
   })
   .catch(error => {
     console.error(error);
+    setCount();
   });
 }, [])
 
@@ -58,18 +69,20 @@ return (
             </p>
         </div>
       ) : (
-        <p>Loading...</p>
+        <p>Les données n'ont pas été récupérées. Veuillez réessayer plus tard.</p>
       )}
     </div>
-    <SimpleBarChart />
-    <SimpleLineChart/>
-    <SimpleRadarChart/>
-    <SimpleRadialBarChart/>
+    <DailyActivityChart />
+    <div className={styles.charts}>
+    <WeeklySessionsChart/>
+    <PerformanceChart/>
+    <ScoreChart/>
+    </div>
     <section className={styles.cards}>
-    <Card img={logoCalories} value={`${calories}kCal`} type="Calories"/>
-    <Card img={logoProteines} value={`${protein}g`} type="Protéines"/> 
-    <Card img={logoCarbo} value={`${carbo}g`} type="Glucides"/>
-    <Card img={logoLipid} value={`${lipid}g`} type="Lipides"/> 
+    <UserDataCard img={logoCalories} value={`${calories}kCal`} type="Calories"/>
+    <UserDataCard img={logoProteines} value={`${protein}g`} type="Protéines"/> 
+    <UserDataCard img={logoCarbo} value={`${carbo}g`} type="Glucides"/>
+    <UserDataCard img={logoLipid} value={`${lipid}g`} type="Lipides"/> 
 
     </section>
   </>

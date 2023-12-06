@@ -1,3 +1,4 @@
+// Variables 
 const daysWeek = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
 const kind = {
     1: 'Intensité',
@@ -7,10 +8,13 @@ const kind = {
     5: 'Energie',
     6: 'Cardio'
 }
+
+//Class formate data
 export default class User {
     constructor(data){
         this.data = data;
     }
+    // Functions for userMainData
     get name() {
         return this.data.userInfos.firstName
     }
@@ -25,26 +29,6 @@ export default class User {
     }
     get lipid() {
         return this.data.keyData.lipidCount
-    }
-    get formattedDataForBarChart() {
-        return this.data.sessions.map((session, index) => ({
-            day: index + 1,
-            kilogram: session.kilogram, 
-            calories: session.calories
-          }));
-    }
-    get formattedDataForLineChart(){
-        return this.data.sessions.map((session, index) => ({
-            day : daysWeek[index], 
-            sessionLength : session.sessionLength
-        }))
-    }
-    get subjectItem() {
-        return this.data.data.map((element, index) => 
-        ({
-            value: element.value,
-            kind: kind[index + 1]
-        }))
     }
     get setScore() {
         return [ 
@@ -64,5 +48,28 @@ export default class User {
     }
     get setTodayScore() {
         return this.data.todayScore * 100
+    }
+    // Function for daily activity data
+    get formattedDataForBarChart() {
+        return this.data.sessions.map((session, index) => ({
+            day: index + 1,
+            kilogram: session.kilogram, 
+            calories: session.calories
+          }));
+    }
+    // Function for weekly sessions data
+    get formattedDataForLineChart(){
+        return this.data.sessions.map((session, index) => ({
+            day : daysWeek[index], 
+            sessionLength : session.sessionLength
+        }))
+    }
+    // Function for performance data
+    get subjectItem() {
+        return this.data.data.map((element, index) => 
+        ({
+            value: element.value,
+            kind: kind[index + 1]
+        }))
     }
 }

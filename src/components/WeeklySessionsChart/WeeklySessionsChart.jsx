@@ -1,12 +1,16 @@
+//Imports
 import React, { useState, useEffect } from 'react'
 import { fetchData } from '../../services/service';
 import User from '../../formattedData/userData';
 import { LineChart, Line, XAxis, Tooltip, Legend, ResponsiveContainer} from 'recharts';
-import styles from './SimpleLineChart.module.css'
+import styles from './WeeklySessionsChart.module.css'
 
-const SimpleLineChart = () => {
+//Component function
+const WeeklySessionsChart = () => {
    let sessionsData = null
    let data = null
+
+    // Import data 
     const [countSessions, setCountSessions] = useState(null);
     useEffect(()=> {
     const userId = 12;
@@ -19,12 +23,16 @@ const SimpleLineChart = () => {
        })
   }, []); 
 
+  // Formates data 
   sessionsData = countSessions ? new User(countSessions) : null
   data = sessionsData ? sessionsData.formattedDataForLineChart : null
 
+  //Legend content 
    const setStyleLegendText = () => {
     return <h2 className={styles.legend}>Durée moyenne des sessions</h2>;
   };
+
+   //Tooltip content 
    const CustomTooltip = ({ payload }) => {
     if (payload && payload.length) {
       return (
@@ -51,7 +59,7 @@ const SimpleLineChart = () => {
     </LineChart>
     </ResponsiveContainer>
     ):(
-      <p>Loading...</p>
+      <p>Les données n'ont pas été récupérées. Veuillez réessayer plus tard.</p>
     ) 
 }
     </div>
@@ -60,4 +68,4 @@ const SimpleLineChart = () => {
   )
 }
 
-export default SimpleLineChart
+export default WeeklySessionsChart

@@ -1,3 +1,4 @@
+//Imports
 import React from 'react'
 import { fetchData } from '../../services/service';
 import { useState, useEffect } from 'react';
@@ -11,13 +12,15 @@ import {
     Legend,
     ResponsiveContainer
   } from "recharts";
-import styles from './SimpleBarChart.module.css'
+import styles from './DailyActivityChart.module.css'
 import User from '../../formattedData/userData';
   
-
-const SimpleBarChart = () => {
+//Component function
+const DailyActivityChart = () => {
   let activity = null
   let sessions = null
+
+  // Import data 
   const [count, setCount] = useState(null)
     useEffect(()=> {
       const userId = 12
@@ -25,19 +28,23 @@ const SimpleBarChart = () => {
       fetchData(userId, activity)
         .then(res => {
           setCount(res)
+          console.log(res);
         })
         .catch(error => {
           console.error(error);
         });
       }, [])
-    
+
+  // Formates data  
   activity = count ? new User(count) : null;
   sessions = activity ? activity.formattedDataForBarChart : null;
- 
 
+  //Legend content 
   const setStyleLegendText = (value) => {
     return <span className={styles.legend}>{value}</span>;
   };
+  
+  //Tooltip content 
   const CustomTooltip = ({ payload }) => {
     if (payload && payload.length) {
       return (
@@ -81,11 +88,11 @@ const SimpleBarChart = () => {
     </ResponsiveContainer>
 
 ) : (
-  <p>Loading...</p>
+  <p>Les données n'ont pas été récupérées. Veuillez réessayer plus tard.</p>
 )
 }
 </div>
   )
 }
 
-export default SimpleBarChart
+export default DailyActivityChart
