@@ -52,7 +52,7 @@ export default class User {
     // Function for daily activity data
     get formattedDataForBarChart() {
         return this.data.sessions.map((session, index) => ({
-            day: index + 1,
+            day: index + 3,
             kilogram: session.kilogram, 
             calories: session.calories
           }));
