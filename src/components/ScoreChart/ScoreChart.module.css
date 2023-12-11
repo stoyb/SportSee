@@ -6,6 +6,9 @@
     background-color: #FBFBFB;
     border-radius: 8px;
 }
+.radialBarChartContainer{
+    margin: 0 auto;
+}
 .title{
     font-family: Roboto;
     font-size: 14px;
@@ -24,8 +27,8 @@
 .todayScore {
     margin:0;
     position: relative;
-    bottom: 136px;
-    left: 32px;
+    top:-82px;
+    left: 50%;
     max-width: 101px;
     text-align: center;
     font-size: 20px;
@@ -37,6 +40,7 @@
     height: 70px;
     border-radius: 50%;
     padding-top: 31px;
+    transform: translateX(-50%) translateY(-50%);
 }
 .todayScoreGrey {
     color: #74798C;

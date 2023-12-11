@@ -31,7 +31,7 @@ const PerformanceChart = () => {
     <>
     <div className={styles.radarChartComponent}>
   { countPerformance ? (
-    <ResponsiveContainer width="100%" height="100%">
+    <ResponsiveContainer width={180} height={180}>
     <RadarChart className={styles.radarChartContainer}  padding={{ right: 10, left: 10 }} cx={86} cy={95} outerRadius={50} data={radarData}>
     <PolarGrid radialLines={false} />
     <PolarAngleAxis dataKey="kind" tick={{ fill: '#FFFFFF', fontSize: 8, fontWeight: 'bold' }} tickFormatter={(value) => value.charAt(0).toUpperCase() + value.slice(1)} />

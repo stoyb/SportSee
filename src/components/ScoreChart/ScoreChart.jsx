@@ -36,7 +36,7 @@ const ScoreChart = () => {
     <>
     <div className={styles.radialBarChartComponent}>
     { countScore ? (
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width={180} height={180} className={styles.radialBarChartContainer}>
       <RadialBarChart 
       width={192} 
       height={192} 

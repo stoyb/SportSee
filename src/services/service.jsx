@@ -53,10 +53,16 @@ const fetchMock = async (userDataId, end) => {
 // Renders results from call data functions 
 export const fetchData = async (userId, end) => {
   try {
-    const fetchedData = await fetchDataFromAPI(userId, end);
-    if (fetchedData !== null) {
-      return fetchedData.data;
-    } else {
+    const isAPI = true
+    if(isAPI){
+      const fetchedData = await fetchDataFromAPI(userId, end);
+      if (fetchedData !== null) {
+        return fetchedData.data;
+      } else {
+        throw new Error("Les données n'ont pas été récupérées.");
+      }
+    }
+    else {
       return await fetchMock(userId, end);
     }
   } catch (error) {
